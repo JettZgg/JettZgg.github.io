@@ -8,7 +8,7 @@
       <link href="/2024/01/28/Performance-Engineering-note-2/"/>
       <url>/2024/01/28/Performance-Engineering-note-2/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="System-Flow"><a href="#System-Flow" class="headerlink" title="System Flow"></a>System Flow</h2><figure align="center">  <img src="https://jettzgg.github.io/images/image-15.png" alt="Alt text" width="100%">  <figcaption>System Flow</figcaption></figure><ul><li>Arrival process, $\lambda$ average rate, distribution</li><li>Queue process, method, size</li><li>Service process, $\mu$ average rate, distribution</li><li>Arrival and service processes are stochastic (random with probabilities)</li></ul>]]></content>
       
       
       
