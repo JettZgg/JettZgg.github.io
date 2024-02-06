@@ -17,7 +17,7 @@
 <meta property="og:image" content="https://jettzgg.github.io/images/image-16.png">
 <meta property="og:image" content="https://jettzgg.github.io/images/image-17.png">
 <meta property="article:published_time" content="2024-01-28T21:59:19.000Z">
-<meta property="article:modified_time" content="2024-01-30T22:03:19.817Z">
+<meta property="article:modified_time" content="2024-02-06T16:17:45.807Z">
 <meta property="article:author" content="Jett Zheng">
 <meta property="article:tag" content="Notes">
 <meta name="twitter:card" content="summary">
@@ -127,7 +127,7 @@
     
     
       <div id="toc">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#System-Flow"><span class="toc-number">1.</span> <span class="toc-text">System Flow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stable-system-in-steay-state"><span class="toc-number">2.</span> <span class="toc-text">Stable system in steay state</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#John-Little%E2%80%99s-Law"><span class="toc-number">3.</span> <span class="toc-text">John Little’s Law</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#State-in-queueing-system"><span class="toc-number">4.</span> <span class="toc-text">State in queueing system</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Probability-of-a-finite-Queueing-System"><span class="toc-number">5.</span> <span class="toc-text">Probability of a finite Queueing System</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Why-a-queueing-system-is-unstable-when-rho-geq-1"><span class="toc-number">6.</span> <span class="toc-text">Why a queueing system is unstable when $\rho \geq 1$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Calculation-of-average-number-and-wait-time"><span class="toc-number">7.</span> <span class="toc-text">Calculation of average number and wait time</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#System-Flow"><span class="toc-number">1.</span> <span class="toc-text">System Flow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stable-system-in-steay-state"><span class="toc-number">2.</span> <span class="toc-text">Stable system in steay state</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#John-Little%E2%80%99s-Law"><span class="toc-number">3.</span> <span class="toc-text">John Little’s Law</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#State-in-queueing-system"><span class="toc-number">4.</span> <span class="toc-text">State in queueing system</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Probability-of-a-finite-Queueing-System"><span class="toc-number">5.</span> <span class="toc-text">Probability of a finite Queueing System</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Probability-of-an-infinite-Queueing-System"><span class="toc-number">6.</span> <span class="toc-text">Probability of an infinite Queueing System</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Why-a-queueing-system-is-unstable-when-rho-geq-1"><span class="toc-number">7.</span> <span class="toc-text">Why a queueing system is unstable when $\rho \geq 1$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Calculation-of-average-number-and-wait-time"><span class="toc-number">8.</span> <span class="toc-text">Calculation of average number and wait time</span></a></li></ol>
       </div>
     
   </span>
@@ -247,7 +247,7 @@ $P_n = \rho^n P_0 = \frac{\rho^n(1 - \rho)}{1 - \rho^{n+1}}$
 <li>In a finite queue, the blocking probability, denoted as $P_B$, is the probability that the queue has reached its capacity limit, which is the same as the probability of there being $n$ customers, expressed as $P_B &#x3D; P_n$.</li>
 <li>For an infinite queue, there is no blocking, meaning customers are never turned away, thus the system’s equations will not include loss terms.</li>
 </ul>
-<div align="center">
+<h2 id="Probability-of-an-infinite-Queueing-System"><a href="#Probability-of-an-infinite-Queueing-System" class="headerlink" title="Probability of an infinite Queueing System"></a>Probability of an infinite Queueing System</h2><div align="center">
 $P_0 = \frac{1}{1 + \rho + \rho^2 + \dots} = 1 - \rho$
 </div>
 <div align="center">
@@ -256,6 +256,7 @@ $P_1 = \rho P_0 = \rho (1 - \rho)$
 <div align="center">
 $P_i = \rho^i P_0 = \rho^i (1 - \rho)$
 </div>
+<br>
 
 <ul>
 <li>There is no loss in this system and the queue could be unstable if $\rho \geq 1$. In fact for $\rho &#x3D; 1$ the equations that we have derived do not hold.</li>
@@ -274,7 +275,13 @@ $P_i = \rho^i P_0 = \rho^i (1 - \rho)$
 <li><p><strong>Stable System for $\rho &lt; 1$</strong>: If $\rho$ is less than 1, the system has the capacity to deal with peaks in demand, allowing the barista to catch up during less busy periods, leading to a stable queue length over time.</p>
 </li>
 </ul>
-<h2 id="Calculation-of-average-number-and-wait-time"><a href="#Calculation-of-average-number-and-wait-time" class="headerlink" title="Calculation of average number and wait time"></a>Calculation of average number and wait time</h2>
+<h2 id="Calculation-of-average-number-and-wait-time"><a href="#Calculation-of-average-number-and-wait-time" class="headerlink" title="Calculation of average number and wait time"></a>Calculation of average number and wait time</h2><ul>
+<li><strong>$\N$</strong>: average number in the system</li>
+<li><strong>$\N_q$</strong>: average number in the queue</li>
+<li><strong>T</strong>: average waiting time in the system</li>
+<li><strong>W</strong>: average waiting time in the queue</li>
+</ul>
+
   </div>
 </article>
 
@@ -301,7 +308,7 @@ $P_i = \rho^i P_0 = \rho^i (1 - \rho)$
     
     
       <div id="toc-footer" style="display: none">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#System-Flow"><span class="toc-number">1.</span> <span class="toc-text">System Flow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stable-system-in-steay-state"><span class="toc-number">2.</span> <span class="toc-text">Stable system in steay state</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#John-Little%E2%80%99s-Law"><span class="toc-number">3.</span> <span class="toc-text">John Little’s Law</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#State-in-queueing-system"><span class="toc-number">4.</span> <span class="toc-text">State in queueing system</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Probability-of-a-finite-Queueing-System"><span class="toc-number">5.</span> <span class="toc-text">Probability of a finite Queueing System</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Why-a-queueing-system-is-unstable-when-rho-geq-1"><span class="toc-number">6.</span> <span class="toc-text">Why a queueing system is unstable when $\rho \geq 1$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Calculation-of-average-number-and-wait-time"><span class="toc-number">7.</span> <span class="toc-text">Calculation of average number and wait time</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#System-Flow"><span class="toc-number">1.</span> <span class="toc-text">System Flow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stable-system-in-steay-state"><span class="toc-number">2.</span> <span class="toc-text">Stable system in steay state</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#John-Little%E2%80%99s-Law"><span class="toc-number">3.</span> <span class="toc-text">John Little’s Law</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#State-in-queueing-system"><span class="toc-number">4.</span> <span class="toc-text">State in queueing system</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Probability-of-a-finite-Queueing-System"><span class="toc-number">5.</span> <span class="toc-text">Probability of a finite Queueing System</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Probability-of-an-infinite-Queueing-System"><span class="toc-number">6.</span> <span class="toc-text">Probability of an infinite Queueing System</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Why-a-queueing-system-is-unstable-when-rho-geq-1"><span class="toc-number">7.</span> <span class="toc-text">Why a queueing system is unstable when $\rho \geq 1$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Calculation-of-average-number-and-wait-time"><span class="toc-number">8.</span> <span class="toc-text">Calculation of average number and wait time</span></a></li></ol>
       </div>
     
 
