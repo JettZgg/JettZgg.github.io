@@ -14,7 +14,7 @@
 <meta property="og:description" content="Two basic types Delay: If $\rho &lt; 1$, no delay, no loss, arrive rate &#x3D; throughput  Loss: When arrive rate &gt; throughput, there is loss. Now $\lambda &gt; \gamma$, $\gamma &#x3D; \lambda (1-P">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-02-23T15:58:08.000Z">
-<meta property="article:modified_time" content="2024-02-23T16:25:53.536Z">
+<meta property="article:modified_time" content="2024-02-23T16:26:56.973Z">
 <meta property="article:author" content="Jett Zheng">
 <meta name="twitter:card" content="summary">
     
@@ -122,7 +122,7 @@
     
     
       <div id="toc">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Two-basic-types"><span class="toc-number">1.</span> <span class="toc-text">Two basic types</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fuctions"><span class="toc-number">2.</span> <span class="toc-text">Fuctions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Infinite-system-M-M-1-K-system"><span class="toc-number">2.1.</span> <span class="toc-text">Infinite system (M&#x2F;M&#x2F;1&#x2F;K system):</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Finite-system-M-M-1-N-system"><span class="toc-number">2.2.</span> <span class="toc-text">Finite system (M&#x2F;M&#x2F;1&#x2F;N system):</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-we-get-average-number-in-the-system-N"><span class="toc-number">3.</span> <span class="toc-text">How we get average number in the system (N)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Infinite-system"><span class="toc-number">3.1.</span> <span class="toc-text">Infinite system:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Finite-system"><span class="toc-number">3.2.</span> <span class="toc-text">Finite system</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Two-basic-types"><span class="toc-number">1.</span> <span class="toc-text">Two basic types</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fuctions"><span class="toc-number">2.</span> <span class="toc-text">Fuctions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Infinite-system"><span class="toc-number">2.1.</span> <span class="toc-text">Infinite system:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Finite-system"><span class="toc-number">2.2.</span> <span class="toc-text">Finite system:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-we-get-average-number-in-the-system-N"><span class="toc-number">3.</span> <span class="toc-text">How we get average number in the system (N)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Infinite-system-1"><span class="toc-number">3.1.</span> <span class="toc-text">Infinite system:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Finite-system-1"><span class="toc-number">3.2.</span> <span class="toc-text">Finite system</span></a></li></ol></li></ol>
       </div>
     
   </span>
@@ -172,7 +172,7 @@
 <li>Little’s law says that: $N &#x3D; \lambda T$</li>
 <li>System and queue: $T &#x3D; W + \frac{1}{\mu}$</li>
 </ul>
-<h3 id="Infinite-system-M-M-1-K-system"><a href="#Infinite-system-M-M-1-K-system" class="headerlink" title="Infinite system (M&#x2F;M&#x2F;1&#x2F;K system):"></a>Infinite system (M&#x2F;M&#x2F;1&#x2F;K system):</h3><ul>
+<h3 id="Infinite-system"><a href="#Infinite-system" class="headerlink" title="Infinite system:"></a>Infinite system:</h3><ul>
 <li><p>$N &#x3D; \frac{\rho}{1 - \rho}$</p>
 </li>
 <li><p>$T &#x3D; \frac{1}{\mu (1 - \rho)}$</p>
@@ -188,15 +188,15 @@
 <p>$$ efficiency &#x3D; \frac{\gamma}{\mu} &#x3D; \frac{\lambda(1 - P_B)}{\mu} &#x3D; 2(1 - \frac{32}{63}) &#x3D; 98.4% $$</p>
 </li>
 </ul>
-<h3 id="Finite-system-M-M-1-N-system"><a href="#Finite-system-M-M-1-N-system" class="headerlink" title="Finite system (M&#x2F;M&#x2F;1&#x2F;N system):"></a>Finite system (M&#x2F;M&#x2F;1&#x2F;N system):</h3><h2 id="How-we-get-average-number-in-the-system-N"><a href="#How-we-get-average-number-in-the-system-N" class="headerlink" title="How we get average number in the system (N)"></a>How we get average number in the system (N)</h2><br>
+<h3 id="Finite-system"><a href="#Finite-system" class="headerlink" title="Finite system:"></a>Finite system:</h3><h2 id="How-we-get-average-number-in-the-system-N"><a href="#How-we-get-average-number-in-the-system-N" class="headerlink" title="How we get average number in the system (N)"></a>How we get average number in the system (N)</h2><br>
 
 <p>$N &#x3D; \sum_{i&#x3D;0}^{\infty} i P_i &#x3D; \sum_{i&#x3D;0}^{\infty} i \rho^i P_0 &#x3D; P_0 \sum_{i&#x3D;0}^{\infty} i \rho^i$</p>
 <p>$\sum_{i&#x3D;0}^{\infty} i \rho^i &#x3D; \rho \frac{d}{d \rho} \sum_{i&#x3D;0}^{\infty} \rho^i$</p>
-<h3 id="Infinite-system"><a href="#Infinite-system" class="headerlink" title="Infinite system:"></a>Infinite system:</h3><br>
+<h3 id="Infinite-system-1"><a href="#Infinite-system-1" class="headerlink" title="Infinite system:"></a>Infinite system:</h3><br>
 
 <p>$\sum_{i&#x3D;0}^{\infty} i \rho^i &#x3D; \rho \frac{d}{d \rho} \sum_{i&#x3D;0}^{\infty} \rho^i &#x3D; \rho \frac{d}{d \rho} \frac{1}{1 - \rho} &#x3D; \frac{\rho}{(1 - \rho)^2}$</p>
 <p>$N &#x3D; P_0 \frac{\rho}{(1 - \rho)^2} &#x3D; (1 - \rho) \frac{\rho}{(1 - \rho)^2} &#x3D; \frac{\rho}{1 - \rho}$</p>
-<h3 id="Finite-system"><a href="#Finite-system" class="headerlink" title="Finite system"></a>Finite system</h3><br>
+<h3 id="Finite-system-1"><a href="#Finite-system-1" class="headerlink" title="Finite system"></a>Finite system</h3><br>
 
 <p>$N &#x3D; P_0 \rho \frac{d}{d \rho} \sum_{i&#x3D;0}^{n} \rho^i$</p>
 <p>$P_0 &#x3D; \frac{1 - \rho}{1 - \rho^{n+1}}$</p>
@@ -231,7 +231,7 @@
     
     
       <div id="toc-footer" style="display: none">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Two-basic-types"><span class="toc-number">1.</span> <span class="toc-text">Two basic types</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fuctions"><span class="toc-number">2.</span> <span class="toc-text">Fuctions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Infinite-system-M-M-1-K-system"><span class="toc-number">2.1.</span> <span class="toc-text">Infinite system (M&#x2F;M&#x2F;1&#x2F;K system):</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Finite-system-M-M-1-N-system"><span class="toc-number">2.2.</span> <span class="toc-text">Finite system (M&#x2F;M&#x2F;1&#x2F;N system):</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-we-get-average-number-in-the-system-N"><span class="toc-number">3.</span> <span class="toc-text">How we get average number in the system (N)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Infinite-system"><span class="toc-number">3.1.</span> <span class="toc-text">Infinite system:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Finite-system"><span class="toc-number">3.2.</span> <span class="toc-text">Finite system</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Two-basic-types"><span class="toc-number">1.</span> <span class="toc-text">Two basic types</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fuctions"><span class="toc-number">2.</span> <span class="toc-text">Fuctions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Infinite-system"><span class="toc-number">2.1.</span> <span class="toc-text">Infinite system:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Finite-system"><span class="toc-number">2.2.</span> <span class="toc-text">Finite system:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-we-get-average-number-in-the-system-N"><span class="toc-number">3.</span> <span class="toc-text">How we get average number in the system (N)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Infinite-system-1"><span class="toc-number">3.1.</span> <span class="toc-text">Infinite system:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Finite-system-1"><span class="toc-number">3.2.</span> <span class="toc-text">Finite system</span></a></li></ol></li></ol>
       </div>
     
 
