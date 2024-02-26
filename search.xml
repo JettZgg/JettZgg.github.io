@@ -4,7 +4,20 @@
   
     
     <entry>
-      <title>Performance Engineering Note 1 - Review</title>
+      <title>What is Performance Engineering?</title>
+      <link href="/2024/02/26/PE-note-2/"/>
+      <url>/2024/02/26/PE-note-2/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Queueing Theory - Review</title>
       <link href="/2024/02/23/PE-note-1-review/"/>
       <url>/2024/02/23/PE-note-1-review/</url>
       
@@ -17,7 +30,7 @@
     
     
     <entry>
-      <title>Performance Engineering Note 1 - Queueing Theory</title>
+      <title>Queueing Theory</title>
       <link href="/2024/01/28/PE-note-1/"/>
       <url>/2024/01/28/PE-note-1/</url>
       
@@ -36,7 +49,7 @@
     
     
     <entry>
-      <title>Performance Engineering Note 0 - Intro</title>
+      <title>Performance Engineering Intro</title>
       <link href="/2024/01/28/PE-note-0/"/>
       <url>/2024/01/28/PE-note-0/</url>
       

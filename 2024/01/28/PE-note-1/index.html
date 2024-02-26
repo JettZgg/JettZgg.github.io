@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
     <meta name="description" content="System Flow      System Flow    Arrival process, $\lambda$ average rate Queue process, method, size Service process, $\mu$ average rate Arrival and service processes are stochastic (random with probab">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Performance Engineering Note 1 - Queueing Theory">
+<meta property="og:title" content="Queueing Theory">
 <meta property="og:url" content="http://example.com/2024/01/28/PE-note-1/index.html">
 <meta property="og:site_name" content="Jett&#39;s Blog">
 <meta property="og:description" content="System Flow      System Flow    Arrival process, $\lambda$ average rate Queue process, method, size Service process, $\mu$ average rate Arrival and service processes are stochastic (random with probab">
@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://jettzgg.github.io/images/image-18.png">
 <meta property="og:image" content="https://jettzgg.github.io/images/image-19.png">
 <meta property="article:published_time" content="2024-01-28T21:59:19.000Z">
-<meta property="article:modified_time" content="2024-02-23T15:57:40.114Z">
+<meta property="article:modified_time" content="2024-02-26T15:21:42.720Z">
 <meta property="article:author" content="Jett Zheng">
 <meta property="article:tag" content="Notes">
 <meta name="twitter:card" content="summary">
@@ -43,7 +43,7 @@
       
     
     <!-- title -->
-    <title>Performance Engineering Note 1 - Queueing Theory</title>
+    <title>Queueing Theory</title>
     <!-- async scripts -->
     <!-- Google Analytics -->
 
@@ -115,16 +115,16 @@
     <div id="share" style="display: none">
       <ul>
   <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2024/01/28/PE-note-1/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2024/01/28/PE-note-1/&text=Performance Engineering Note 1 - Queueing Theory"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2024/01/28/PE-note-1/&title=Performance Engineering Note 1 - Queueing Theory"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2024/01/28/PE-note-1/&is_video=false&description=Performance Engineering Note 1 - Queueing Theory"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Performance Engineering Note 1 - Queueing Theory&body=Check out this article: http://example.com/2024/01/28/PE-note-1/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2024/01/28/PE-note-1/&title=Performance Engineering Note 1 - Queueing Theory"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2024/01/28/PE-note-1/&title=Performance Engineering Note 1 - Queueing Theory"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2024/01/28/PE-note-1/&title=Performance Engineering Note 1 - Queueing Theory"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2024/01/28/PE-note-1/&title=Performance Engineering Note 1 - Queueing Theory"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2024/01/28/PE-note-1/&name=Performance Engineering Note 1 - Queueing Theory&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2024/01/28/PE-note-1/&t=Performance Engineering Note 1 - Queueing Theory"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2024/01/28/PE-note-1/&text=Queueing Theory"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2024/01/28/PE-note-1/&title=Queueing Theory"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2024/01/28/PE-note-1/&is_video=false&description=Queueing Theory"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Queueing Theory&body=Check out this article: http://example.com/2024/01/28/PE-note-1/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2024/01/28/PE-note-1/&title=Queueing Theory"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2024/01/28/PE-note-1/&title=Queueing Theory"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2024/01/28/PE-note-1/&title=Queueing Theory"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2024/01/28/PE-note-1/&title=Queueing Theory"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2024/01/28/PE-note-1/&name=Queueing Theory&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2024/01/28/PE-note-1/&t=Queueing Theory"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -144,7 +144,7 @@
   <header>
     
     <h1 class="posttitle p-name" itemprop="name headline">
-        Performance Engineering Note 1 - Queueing Theory
+        Queueing Theory
     </h1>
 
 
@@ -413,16 +413,16 @@ $ \text{efficiency} = \frac{\gamma}{\mu} = \rho (1 - P_B) $
     <div id="share-footer" style="display: none">
       <ul>
   <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2024/01/28/PE-note-1/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2024/01/28/PE-note-1/&text=Performance Engineering Note 1 - Queueing Theory"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2024/01/28/PE-note-1/&title=Performance Engineering Note 1 - Queueing Theory"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2024/01/28/PE-note-1/&is_video=false&description=Performance Engineering Note 1 - Queueing Theory"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Performance Engineering Note 1 - Queueing Theory&body=Check out this article: http://example.com/2024/01/28/PE-note-1/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2024/01/28/PE-note-1/&title=Performance Engineering Note 1 - Queueing Theory"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2024/01/28/PE-note-1/&title=Performance Engineering Note 1 - Queueing Theory"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2024/01/28/PE-note-1/&title=Performance Engineering Note 1 - Queueing Theory"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2024/01/28/PE-note-1/&title=Performance Engineering Note 1 - Queueing Theory"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2024/01/28/PE-note-1/&name=Performance Engineering Note 1 - Queueing Theory&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2024/01/28/PE-note-1/&t=Performance Engineering Note 1 - Queueing Theory"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2024/01/28/PE-note-1/&text=Queueing Theory"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2024/01/28/PE-note-1/&title=Queueing Theory"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2024/01/28/PE-note-1/&is_video=false&description=Queueing Theory"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Queueing Theory&body=Check out this article: http://example.com/2024/01/28/PE-note-1/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2024/01/28/PE-note-1/&title=Queueing Theory"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2024/01/28/PE-note-1/&title=Queueing Theory"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2024/01/28/PE-note-1/&title=Queueing Theory"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2024/01/28/PE-note-1/&title=Queueing Theory"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2024/01/28/PE-note-1/&name=Queueing Theory&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2024/01/28/PE-note-1/&t=Queueing Theory"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
