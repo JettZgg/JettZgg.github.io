@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>What is Performance Engineering?</title>
+      <title>Erlang&#39;s Theory</title>
       <link href="/2024/02/26/PE-note-2/"/>
       <url>/2024/02/26/PE-note-2/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="Erlang-Queuing-Models"><a href="#Erlang-Queuing-Models" class="headerlink" title="Erlang Queuing Models"></a>Erlang Queuing Models</h2><h3 id="Erlang-B-Model"><a href="#Erlang-B-Model" class="headerlink" title="Erlang B Model"></a>Erlang B Model</h3><ul><li><strong>Purpose</strong>: finite number of servers, no waiting space.</li><li><strong>Characteristic</strong>: All arriving jobs that find all servers busy are immediately blocked and lost (cleared from the system).</li><li><strong>Application</strong>: Commonly used in telecommunication systems to determine the number of circuits required to handle a given call volume with a certain quality of service.</li></ul><h3 id="Erlang-C-Model"><a href="#Erlang-C-Model" class="headerlink" title="Erlang C Model"></a>Erlang C Model</h3><ul><li><strong>Purpose</strong>: finite number of servers, infinite waiting space.</li><li><strong>Characteristic</strong>: Jobs that find all servers busy will wait in an infinite queue.</li><li><strong>Application</strong>: Used in call centers to calculate the probability of a caller having to wait and the expected waiting time, helping to determine the necessary staffing levels for a desired service level.</li></ul><h3 id="Erlang-A-Model"><a href="#Erlang-A-Model" class="headerlink" title="Erlang A Model"></a>Erlang A Model</h3><ul><li><strong>Purpose</strong>: finite number of servers, the possibility of customers abandoning the queue if the wait is too long.</li><li><strong>Characteristic</strong>: Adds customer impatience to the Erlang C model.</li><li><strong>Application</strong>: Useful in environments where customer patience is a significant factor, such as in call centers where callers may hang up if not served within a certain timeframe.</li></ul><p>Each model provides a framework for understanding how different system designs will perform under various conditions, allowing businesses to plan and allocate resources effectively.</p>]]></content>
       
       
       

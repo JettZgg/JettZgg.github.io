@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta property="og:type" content="article">
-<meta property="og:title" content="What is Performance Engineering?">
+    <meta name="description" content="Erlang Queuing ModelsErlang B Model Purpose: finite number of servers, no waiting space. Characteristic: All arriving jobs that find all servers busy are immediately blocked and lost (cleared from the">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Erlang&#39;s Theory">
 <meta property="og:url" content="http://example.com/2024/02/26/PE-note-2/index.html">
 <meta property="og:site_name" content="Jett&#39;s Blog">
+<meta property="og:description" content="Erlang Queuing ModelsErlang B Model Purpose: finite number of servers, no waiting space. Characteristic: All arriving jobs that find all servers busy are immediately blocked and lost (cleared from the">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-02-26T15:15:47.000Z">
-<meta property="article:modified_time" content="2024-02-26T15:22:14.206Z">
+<meta property="article:modified_time" content="2024-02-27T03:18:44.518Z">
 <meta property="article:author" content="Jett Zheng">
 <meta name="twitter:card" content="summary">
     
@@ -34,7 +36,7 @@
       
     
     <!-- title -->
-    <title>What is Performance Engineering?</title>
+    <title>Erlang&#39;s Theory</title>
     <!-- async scripts -->
     <!-- Google Analytics -->
 
@@ -104,20 +106,24 @@
     <div id="share" style="display: none">
       <ul>
   <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2024/02/26/PE-note-2/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2024/02/26/PE-note-2/&text=What is Performance Engineering?"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2024/02/26/PE-note-2/&title=What is Performance Engineering?"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2024/02/26/PE-note-2/&is_video=false&description=What is Performance Engineering?"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=What is Performance Engineering?&body=Check out this article: http://example.com/2024/02/26/PE-note-2/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2024/02/26/PE-note-2/&title=What is Performance Engineering?"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2024/02/26/PE-note-2/&title=What is Performance Engineering?"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2024/02/26/PE-note-2/&title=What is Performance Engineering?"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2024/02/26/PE-note-2/&title=What is Performance Engineering?"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2024/02/26/PE-note-2/&name=What is Performance Engineering?&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2024/02/26/PE-note-2/&t=What is Performance Engineering?"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2024/02/26/PE-note-2/&text=Erlang&#39;s Theory"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2024/02/26/PE-note-2/&title=Erlang&#39;s Theory"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2024/02/26/PE-note-2/&is_video=false&description=Erlang&#39;s Theory"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Erlang&#39;s Theory&body=Check out this article: http://example.com/2024/02/26/PE-note-2/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2024/02/26/PE-note-2/&title=Erlang&#39;s Theory"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2024/02/26/PE-note-2/&title=Erlang&#39;s Theory"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2024/02/26/PE-note-2/&title=Erlang&#39;s Theory"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2024/02/26/PE-note-2/&title=Erlang&#39;s Theory"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2024/02/26/PE-note-2/&name=Erlang&#39;s Theory&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2024/02/26/PE-note-2/&t=Erlang&#39;s Theory"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
     
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Erlang-Queuing-Models"><span class="toc-number">1.</span> <span class="toc-text">Erlang Queuing Models</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Erlang-B-Model"><span class="toc-number">1.1.</span> <span class="toc-text">Erlang B Model</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Erlang-C-Model"><span class="toc-number">1.2.</span> <span class="toc-text">Erlang C Model</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Erlang-A-Model"><span class="toc-number">1.3.</span> <span class="toc-text">Erlang A Model</span></a></li></ol></li></ol>
+      </div>
     
   </span>
 </div>
@@ -129,7 +135,7 @@
   <header>
     
     <h1 class="posttitle p-name" itemprop="name headline">
-        What is Performance Engineering?
+        Erlang&#39;s Theory
     </h1>
 
 
@@ -156,7 +162,23 @@
   
 
   <div class="content e-content" itemprop="articleBody">
-    
+    <h2 id="Erlang-Queuing-Models"><a href="#Erlang-Queuing-Models" class="headerlink" title="Erlang Queuing Models"></a>Erlang Queuing Models</h2><h3 id="Erlang-B-Model"><a href="#Erlang-B-Model" class="headerlink" title="Erlang B Model"></a>Erlang B Model</h3><ul>
+<li><strong>Purpose</strong>: finite number of servers, no waiting space.</li>
+<li><strong>Characteristic</strong>: All arriving jobs that find all servers busy are immediately blocked and lost (cleared from the system).</li>
+<li><strong>Application</strong>: Commonly used in telecommunication systems to determine the number of circuits required to handle a given call volume with a certain quality of service.</li>
+</ul>
+<h3 id="Erlang-C-Model"><a href="#Erlang-C-Model" class="headerlink" title="Erlang C Model"></a>Erlang C Model</h3><ul>
+<li><strong>Purpose</strong>: finite number of servers, infinite waiting space.</li>
+<li><strong>Characteristic</strong>: Jobs that find all servers busy will wait in an infinite queue.</li>
+<li><strong>Application</strong>: Used in call centers to calculate the probability of a caller having to wait and the expected waiting time, helping to determine the necessary staffing levels for a desired service level.</li>
+</ul>
+<h3 id="Erlang-A-Model"><a href="#Erlang-A-Model" class="headerlink" title="Erlang A Model"></a>Erlang A Model</h3><ul>
+<li><strong>Purpose</strong>: finite number of servers, the possibility of customers abandoning the queue if the wait is too long.</li>
+<li><strong>Characteristic</strong>: Adds customer impatience to the Erlang C model.</li>
+<li><strong>Application</strong>: Useful in environments where customer patience is a significant factor, such as in call centers where callers may hang up if not served within a certain timeframe.</li>
+</ul>
+<p>Each model provides a framework for understanding how different system designs will perform under various conditions, allowing businesses to plan and allocate resources effectively.</p>
+
   </div>
 </article>
 
@@ -182,26 +204,32 @@
 
     
     
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Erlang-Queuing-Models"><span class="toc-number">1.</span> <span class="toc-text">Erlang Queuing Models</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Erlang-B-Model"><span class="toc-number">1.1.</span> <span class="toc-text">Erlang B Model</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Erlang-C-Model"><span class="toc-number">1.2.</span> <span class="toc-text">Erlang C Model</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Erlang-A-Model"><span class="toc-number">1.3.</span> <span class="toc-text">Erlang A Model</span></a></li></ol></li></ol>
+      </div>
+    
 
     <div id="share-footer" style="display: none">
       <ul>
   <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2024/02/26/PE-note-2/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2024/02/26/PE-note-2/&text=What is Performance Engineering?"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2024/02/26/PE-note-2/&title=What is Performance Engineering?"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2024/02/26/PE-note-2/&is_video=false&description=What is Performance Engineering?"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=What is Performance Engineering?&body=Check out this article: http://example.com/2024/02/26/PE-note-2/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2024/02/26/PE-note-2/&title=What is Performance Engineering?"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2024/02/26/PE-note-2/&title=What is Performance Engineering?"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2024/02/26/PE-note-2/&title=What is Performance Engineering?"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2024/02/26/PE-note-2/&title=What is Performance Engineering?"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2024/02/26/PE-note-2/&name=What is Performance Engineering?&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2024/02/26/PE-note-2/&t=What is Performance Engineering?"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2024/02/26/PE-note-2/&text=Erlang&#39;s Theory"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2024/02/26/PE-note-2/&title=Erlang&#39;s Theory"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2024/02/26/PE-note-2/&is_video=false&description=Erlang&#39;s Theory"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Erlang&#39;s Theory&body=Check out this article: http://example.com/2024/02/26/PE-note-2/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2024/02/26/PE-note-2/&title=Erlang&#39;s Theory"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2024/02/26/PE-note-2/&title=Erlang&#39;s Theory"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2024/02/26/PE-note-2/&title=Erlang&#39;s Theory"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2024/02/26/PE-note-2/&title=Erlang&#39;s Theory"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2024/02/26/PE-note-2/&name=Erlang&#39;s Theory&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2024/02/26/PE-note-2/&t=Erlang&#39;s Theory"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
 
     <div id="actions-footer">
         <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
         
         <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
         <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
